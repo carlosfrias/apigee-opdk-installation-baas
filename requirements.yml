@@ -66,3 +66,5 @@
 - src: https://github.com/carlosfrias/apigee-internal-port-connectivity-validator-ui
 
 - src: https://github.com/carlosfrias/apigee-opdk-baas-create-org-and-user
+
+- src: https://github.com/carlosfrias/apigee-opdk-baas-silent-installation-config
