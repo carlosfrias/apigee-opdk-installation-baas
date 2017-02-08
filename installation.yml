@@ -4,6 +4,10 @@
   - cache
   - os-pre-req
   - apigee-pre-req
+  - cassandra
+  - elastic
+  - portal
+  - baas
 
 - include: configuration/load-opdk-credentials.yml
   vars:
