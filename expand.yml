@@ -67,8 +67,3 @@
   tags:
   - portal
 
-- include: configuration/opdk-baas-create-org-user.yml
-  vars:
-    hosts: 'dc-2-baas[0]'
-  tags:
-  - org
