@@ -67,3 +67,11 @@
   tags:
   - portal
 
+- name: Update dc-1-cassandra
+  include: components/opdk-install-component.yml
+  vars:
+    hosts: 'dc-1-cassandra'
+    component_profile: 'c'
+  tags:
+  - dc-1-cassandra
+
