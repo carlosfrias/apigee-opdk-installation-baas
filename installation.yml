@@ -11,7 +11,7 @@
 
 - include: configuration/load-opdk-credentials.yml
   vars:
-    hosts: 'dc1'
+    hosts: 'dc-1'
   tags:
   - credentials
   - os-pre-req
@@ -19,14 +19,14 @@
 
 - include: configuration/opdk-setup-os.yml
   vars:
-    hosts: 'dc1'
+    hosts: 'dc-1'
   tags:
   - os
   - os-pre-req
 
 - include: configuration/update-user.yml
   vars:
-    hosts: 'dc1'
+    hosts: 'dc-1'
     user: 'root'
   tags:
   - root-user
@@ -34,41 +34,41 @@
 
 - include: components/opdk-pre-requisites.yml
   vars:
-    hosts: 'dc1'
+    hosts: 'dc-1'
     jdk_version: '1.8'
   tags:
   - apigee-pre-req
 
 - include: components/opdk-install-component.yml
   vars:
-    hosts: 'dc1-cassandra'
+    hosts: 'dc-1-cassandra'
     component_profile: 'c'
   tags:
   - cassandra
 
 - include: components/opdk-install-component.yml
   vars:
-    hosts: 'dc1-elastic'
+    hosts: 'dc-1-elastic'
     component_profile: 'e'
   tags:
   - elastic
 
 - include: components/opdk-install-component.yml
   vars:
-    hosts: 'dc1-baas'
+    hosts: 'dc-1-baas'
     component_profile: 'b'
   tags:
   - baas
 
 - include: components/opdk-install-component.yml
   vars:
-    hosts: 'dc1-portal'
+    hosts: 'dc-1-portal'
     component_profile: 'p'
   tags:
   - portal
 
 - include: configuration/opdk-baas-create-org-user.yml
   vars:
-    hosts: 'dc1-baas[0]'
+    hosts: 'dc-1-baas[0]'
   tags:
   - org
