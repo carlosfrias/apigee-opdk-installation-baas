@@ -11,7 +11,7 @@
 
 - include: configuration/load-opdk-credentials.yml
   vars:
-    hosts: 'dc-2'
+    hosts: 'dc2'
   tags:
   - credentials
   - os-pre-req
@@ -19,14 +19,14 @@
 
 - include: configuration/opdk-setup-os.yml
   vars:
-    hosts: 'dc-2'
+    hosts: 'dc2'
   tags:
   - os
   - os-pre-req
 
 - include: configuration/update-user.yml
   vars:
-    hosts: 'dc-2'
+    hosts: 'dc2'
     user: 'root'
   tags:
   - root-user
@@ -34,44 +34,44 @@
 
 - include: components/opdk-pre-requisites.yml
   vars:
-    hosts: 'dc-2'
+    hosts: 'dc2'
     jdk_version: '1.8'
   tags:
   - apigee-pre-req
 
 - include: components/opdk-install-component.yml
   vars:
-    hosts: 'dc-2-cassandra'
+    hosts: 'dc2-cassandra'
     component_profile: 'c'
   tags:
   - cassandra
 
 - include: components/opdk-install-component.yml
   vars:
-    hosts: 'dc-2-elastic'
+    hosts: 'dc2-elastic'
     component_profile: 'e'
   tags:
   - elastic
 
 - include: components/opdk-install-component.yml
   vars:
-    hosts: 'dc-2-baas'
+    hosts: 'dc2-baas'
     component_profile: 'b'
   tags:
   - baas
 
 - include: components/opdk-install-component.yml
   vars:
-    hosts: 'dc-2-portal'
+    hosts: 'dc2-portal'
     component_profile: 'p'
   tags:
   - portal
 
-- name: Update dc-1-cassandra
+- name: Update dc1-cassandra
   include: components/opdk-install-component.yml
   vars:
-    hosts: 'dc-1-cassandra'
+    hosts: 'dc1-cassandra'
     component_profile: 'c'
   tags:
-  - dc-1-cassandra
+  - dc1-cassandra
 
