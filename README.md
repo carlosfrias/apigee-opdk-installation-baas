@@ -1,3 +1,5 @@
+This playbook has been DEPRECATED. Apigee no longer supports Baas.
+
 <!-- BEGIN Google Required Disclaimer -->
 
 # Not Google Product Clause
